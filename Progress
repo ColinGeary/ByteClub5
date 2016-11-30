@@ -1,0 +1,107 @@
+import java.lang.*;
+import java.util.*;
+import javax.swing.*;
+
+public class ByteClub5{
+  public static void main(String[] args){
+  Scanner scan = new Scanner(System.in);
+  String str, output;
+  helloWorld();
+  System.out.println();
+  leapYear();
+  System.out.println();
+  multiples();
+  System.out.println();
+  System.out.println();
+  str = randomAdjetiveFinder();
+  System.out.println(str);
+  System.out.println();
+  output = palindrome(str);
+  System.out.println(output);
+  
+  }//end main
+
+
+  public static void helloWorld(){
+    System.out.println("Hello World!");
+  }//end helloWorld
+
+
+  public static void leapYear(){
+    int year = 1900;
+    while (year <= 2016){
+      	System.out.print(year + ", ");
+        year += 4;
+    }
+  }//end leapYear
+
+ public static void multiples(){
+    int number = 3;
+    System.out.println();
+    while ( number < 100){
+      System.out.print(number + ", ");
+      number += 3;
+    }
+    
+  }//end multiples
+
+
+  public static String randomAdjetiveFinder(){
+    String adjectives[] = {"Yawning", "Zesty", "Abandoned", "Able", "Adorable", "Adventurous", "Accomplished", "Aching", "Bad", "basic" , "Beautiful", "Beloved",
+						"Calculating", "Calm", "Carefree", "Careful", "Careless", "Caring", "Cautious", "Tiny", 
+                          "Torn", "Vacant", "Vague", "Repulsive", "Rich", "Quaint", "Nasty", "natural"};
+	Random rand = new Random();
+    String str;
+	int index;
+    index = rand.nextInt(28) + 0;
+    str = "Have a(n) " + adjectives[index] + " day";
+    
+    
+	return str;
+  }//end randomAdjetiveFinder
+  
+ public static Palindrome(){
+    String str, another = "y";
+    int left, right;
+    Scanner scan = new Scanner(System.in);
+    
+    while(another.equalisIgnoreCase("y")){
+      System.out.println("Enter a potential palindrome: ");
+      str = scan.nextLine();
+      
+      left = 0;
+      right = str.length() - 1;
+      
+      while (str.charAt(left) == str.charAt(right) && left < right){
+        right++;
+        left++;
+      }
+      
+      System.out.println();
+      
+      if (left < right)
+        System.out.println("That string is NOT a palindrome");
+      else
+        System.out.println("That string IS a palindrome");
+      
+      System.out.println();
+      System.out.println("Test another palindrome (y/n)?");
+      another = scan.nextLine();   
+      
+    }//end while
+    
+    
+  }//end main
+
+
+
+
+
+
+
+
+
+
+
+
+} 
